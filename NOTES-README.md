@@ -36,3 +36,5 @@ Example:
 ```shell
 ng build --configuration production --base-href https://sriram-ponangi.github.io/
 ```
+
+Rename the generated dist directory to docs
