@@ -4,8 +4,9 @@ description: >
   cloud-native applications.
   Moreover, I have expertise in developing CI/CD pipelines, creating
   infrastructure as code, automating orchestration and deployment of container-based workloads.
+# remote_theme: pages-themes/slate@v0.2.0
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-remote-theme
-show_downloads: true
+show_downloads: false
 logo: /assets/img/sriram.jpg

@@ -1,6 +1,5 @@
-# SKILLS
----
-### Frameworks / Libraries
+<h1>SKILLS</h1>
+<h3 style="color:DodgerBlue;">Frameworks / Libraries</h3>
 - Spring Boot, Spring MVC, Node.js, Express.js, Angular, React.js, Bootstrap, Jasmine, Protractor
 
 ### Programming / Scripting Languages
@@ -36,7 +35,28 @@
 - ### Certified Kubernetes Administrator (Scored: 100%)
 - ### Oracle Certified Java Professional
 
-# WORK EXPERIENCES
+<div id="badges">
+  <a href="[link to your LinkedIn profile]">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="[link to your Medium profile]">
+    <img src="https://img.shields.io/badge/Medium-white?style=for-the-badge&logo=medium&logoColor=black" alt="Medium Badge"/>
+  </a>
+  <a href="[link to your Tableau profile]">
+    <img src="https://img.shields.io/badge/tableau-navy?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau Badge"/>
+  </a>
+</div>
+
+
+<div class="header">
+  <img src="assets/img/work-experience-logo.svg" alt="Work Experience Icon" style="float: left;
+    width: 30px;
+    height: auto;"/>
+  <h1 style="position: relative;
+  top: 18px;
+  left: 10px;">WORK EXPERIENCES</h1>
+</div>
+
 ---
 # EDUCATION
 ---
