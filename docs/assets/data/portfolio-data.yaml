@@ -1,0 +1,182 @@
+#############################################################################
+# PROFILE OVERVIEW
+#############################################################################
+profileInfo:
+  name: "Sriram Ponangi"
+  profilePictureUrl: "assets/img/sriram.jpg"
+  description: |
+    <strong>Full Stack Developer</strong> and <strong>DevOps Engineer</strong> with experience primarily in the 
+    development of cloud-native applications, developing CI/CD pipelines, creating infrastructure as code, 
+    automating orchestration and deployment of container-based workloads.
+  contact:
+    location:
+      displayName: "Halifax, Nova Scotia, Canada"
+      link: https://maps.app.goo.gl/zbyBaJLk6AXJfwiU7
+    linkedin:
+      displayName: www.linkedin.com/in/ponangi
+      link: https://www.linkedin.com/in/ponangi/
+    email:
+      displayName: sriram.ponangi@gmail.com
+      link: mailto:sriram.ponangi@gmail.com
+    github:
+      displayName: www.github.com/sriram-ponangi
+      link: https://github.com/sriram-ponangi
+  badges:
+  - name: "Certified Kubernetes Administrator"
+    imageUrl: "/assets/img/certs/cka.png"
+    verificationLink: https://www.credly.com/badges/c99ccba2-8fdd-4b87-8fea-def9aa1b8280/public_url
+  - name: "AWS Knowledge: Amazon EKS"
+    imageUrl: "/assets/img/certs/eks.png"
+    verificationLink: https://www.credly.com/badges/85f60743-ce64-4495-b92d-cc5f826fc81a/public_url
+  - name: "Building Scalable Systems"
+    imageUrl: "/assets/img/certs/building-scalable-systems.png"
+    verificationLink: https://www.credly.com/badges/bb205754-0b94-4ecc-b429-464f39e7ce8b/public_url
+  - name: "Reactive Architecture Foundations"
+    imageUrl: "/assets/img/certs/reactive-architecture-foundations.png"
+    verificationLink: https://www.credly.com/badges/a17aabd5-092e-4789-b518-67487e94e5d5/public_url
+  - name: "Principles of Reactive Architecture"
+    imageUrl: "/assets/img/certs/principles-of-reactive-architecture.png"
+    verificationLink: https://www.credly.com/badges/d049690e-312d-4828-a648-890837ab5c79/public_url
+  - name: "Oracle Certified Professional Java SE 6 Programmer"
+    imageUrl: "/assets/img/certs/oracle-certified-professional-java-se-6-programmer.png"
+    verificationLink: https://www.credly.com/badges/34b2c048-c8e9-42a8-9b16-f4494f477616/public_url
+  - name: "Angular App"
+    imageUrl: "/assets/img/certs/simple-angular-app.png"
+    verificationLink: https://www.credly.com/badges/87d30299-fa22-4264-bcf0-2c4258c9c11d/public_url
+  - name: "Banking Insights and Solutions Silver"
+    imageUrl: "/assets/img/certs/banking-insights-and-solutions-silver.png"
+    verificationLink: https://www.credly.com/badges/9bbf76d4-c0ad-4c61-9061-481c9d6548ce/public_url
+
+
+
+
+#############################################################################
+# SKILLS
+#############################################################################
+# TIP: Inside skills the details section is treated as innerHTML
+skills:
+- title: "DevOps"
+  details: |
+    Containers (Dockers / Podman), Kubernetes / OpenShift, AWS, Jenkins, GitHub Actions, GitLab CI/CD, 
+    Maven, NPM, SonarQube, JFrog Artifactory, Istio, Envoy, Nginx, Apache Kafka, RedHat / CentOS, Ubuntu, Jira, Confluence
+- title: "Programming / Scripting Languages"
+  details: Java, JavaScript, Python, Bash, TypeScript, HTML, SQL(Liquibase)
+- title: "Frameworks / Libraries"
+  details: Spring Boot, Node.js / Express.js, Angular, Bootstrap
+- title: "API"
+  details: XML, JSON, YAML, REST, SOAP, gRPC (Protocol Buffers), GraphQL, OpenAPI / Swagger
+- title: "Database"
+  details: MySQL, MongoDB, Redis, PostgreSQL, Neo4j, AWS DynamoDB
+
+
+#############################################################################
+# EDUCATION
+#############################################################################
+# TIP: Inside education the relevantCourses section is treated as innerHTML
+education:
+- title: "Masters in Applied Computer Science"
+  timePeriod: "01/2020 - 08/2021"
+  cgpa: "4.07 / 4.3"
+  institutionName: "Dalhousie University, Canada"
+  institutionLink: "https://www.dal.ca/"
+  relevantCourses:
+  - "Advanced Software Development (CI/CD, TDD, SOLID Principles, Design Patterns, Clean Coding Principles)"
+  - "Advanced Cloud Computing (Serverless, AWS, Azure, Distributed Transactions - 2PC / SAGA, Dockers, Kubernetes)"
+  - "Data Management (MySQL, NoSQL - MongoDB, Neo4j, Data Warehouse Design, Hadoop / Spark, Tableau)"
+  - "Machine Learning & Visual Analytics (Classification, Regression, Clustering, NLP, Neural Networks)"
+
+- title: "Bachelors in Computer Science Engineering"
+  timePeriod: "04/2013 - 04/2017"
+  cgpa: "8.46 / 10"
+  institutionName: "GITAM University, India"
+  institutionLink: "https://www.gitam.edu/"
+  relevantCourses:
+  - "Data Structures & Algorithms, Objected Oriented Design (UML), Database Management, Operating Systems, Computer Networks and Security (SSH, JWT, OAuth)"
+
+
+
+
+
+#############################################################################
+# EXPERIENCE
+#############################################################################
+# TIP: Inside experience the role's details section is treated as innerHTML
+experience:
+- company: "IBM"
+  roles:
+    - roleTitle: "Lead Application Developer"
+      timePeriod: "01/2023 - present"
+      teamAndProjectTitle: "Hybrid Cloud Services Team | Scotiabank Cheque Processing Project"
+      details:
+      - "Implemented non-functional features, including mTLS (PKCS12 keystore and truststore), OAuth(Client Credentials Flow and Authorization Code), and externalizing properties with dynamic secret generation and rotation."
+      - "Developed automation scripts for packaging and deploying containerized apps on OpenShift in the cloud and standalone apps running on on-premise servers, utilizing Python, maven assembly, systemd unit files, Podman container files, and Helm charts."
+      - "Addressed challenges by minimizing app coupling to facilitate easier build and deployment."
+      - "Formulated DevOps strategy encompassing git branching strategy, app versioning, CI/CD pipeline design, configuration/secrets management, code promotion across multiple testing teams and environments, and SQL Scripts change log management using Liquibase."
+    
+    - roleTitle: "Full Stack Developer"
+      timePeriod: "09/2021 - 12/2022"
+      teamAndProjectTitle: "Hybrid Cloud Services Team | Scotiabank Cheque Processing Project"
+      details:
+      - "Architected and implemented a suite of highly configurable applications for processing X937 files containing cheque images and metadata. Developed a highly available and fault-tolerant file gateway application to monitor, validate, transform, and seamlessly transfer files to downstream apps. And developed other microservices for file tracking, alerting, displaying insights and performing updates on the received files on a dashboard."
+      - "Designed and developed batch-processing applications to generate, and process various types of reports and extracts scheduled throughout the day with fixed timings and strict SLAs."
+
+
+- company: "Canada Revenue Agency"
+  roles:
+    - roleTitle: "IT - Developer (Co-op)"
+      timePeriod: "05/2021 - 08/2021"
+      teamAndProjectTitle: "Enterprise Correspondence Team"
+      details:
+      - "Developed applications in Java for enterprise correspondence, by following the agile SDLC, SOLID principles, object oriented design patterns, clean coding techniques, code reviews, and test-driven development (TDD)."
+      - "Designed and developed dashboards using Angular with end-to-end tests using Protractor and Jasmine."
+      - "Performed the Scrum master role by following the best practices of agile development for a team of nine developers."
+
+
+- company: "Dalhousie University"
+  roles:
+    - roleTitle: "Teaching Assistant & Marker"
+      timePeriod: "01/2021 - 08/2021"
+      teamAndProjectTitle: "Adv. Cloud Computing Course"
+      details:
+      - "Developed and demonstrated proof of concept applications live during lab sessions to 150 students, on various services from AWS like Serverless (API Gateway, Lambda, SQS, DynamoDB, S3) and Dockers & Kubernetes (EKS)."
+      - "Helped teams create CI/CD pipelines using the GitLab runners to execute the tests, build and deploy to AWS."
+      - "Mentored 50-plus students to develop projects using AWS while resolving conflicts among the student groups."
+
+- company: "Verizon"
+  roles:
+    - roleTitle: "Member of Technical Staff - 2"
+      timePeriod: "01/2019 - 11/2019"
+      teamAndProjectTitle: "Managed Security Services Team"
+      details:
+      - "Developed, deployed and maintained applications in Kubernetes clusters, both on-premise (Kubeadm) and cloud (EKS - AWS). It helped teams focus on business needs by becoming language agnostic and reducing maintenance effort."
+      - "Developed and deployed I/O intense microservice applications in Spring boot / Webflux and node.js/express.js to handle the huge traffic from the security incidents being sent to the Security Operations Center (SOC) analysts."
+      - "Developed playbooks for Security Orchestration, Automation and Response (SOAR) applications using Python. It significantly helped the SOC analysts, by filtering out the false positive security alerts."
+      - "Automated creation of weekly bug/security incident reports using Python, Google Apps Scripts, and Linux cron jobs, which saved 8 hours of monotonous work every week."
+      - "Improved performance of a legacy SOAR application in Java by 90%, for some of its frequently used features. Which boosted the efficiency of our SOC analysts and led to a huge increase in customer satisfaction."
+      - "Trained team members with weekly knowledge share sessions on topics like “Microservices Architecture & System Design Patterns” and “Dockers & Kubernetes”, which improved the team’s overall skill."
+
+    - roleTitle: "Member of Technical Staff - 1"
+      timePeriod: "06/2017 - 12/2018"
+      teamAndProjectTitle: "Networking & Telecommunications Team"
+      details:
+      - "Developed and deployed other microservices for tracking the technicians and assigning them jobs, primarily using Netflix OSS stack in Spring boot/cloud and RedHat/CentOS."
+      - "Designed and developed logging and monitoring dashboards for microservices using the ELK-Stack."
+      - "Deployed and integrated Redis cluster with the microservices for caching."
+      - "Designed event-driven microservices related to the dispatch and mobility of technicians using Spring Boot and Apache Kafka as a messaging queue. It made systems loosely coupled and simplified communications among them."
+      - "Improved performance of a legacy SOAR application in Java by 90%, for some of its frequently used features. Which boosted the efficiency of our SOC analysts and led to a huge increase in customer satisfaction."
+      - "Written technical specifications and documentation in Atlassian’s Confluence tool, which assisted in providing efficient knowledge transfer/onboarding to the new team members and acted as a reference for others."
+
+
+
+#############################################################################
+# PROJECTS
+#############################################################################
+projects:
+- title: "Distributed Log Tracing Using Jaeger"
+  logoUrl: "/assets/img/projects/HighLevelDesign.png"
+  technologiesUsed: "Spring boot, JUNIT, Maven, Kubernetes / Openshift (Service Mesh), Jaeger"
+  description: |
+    This is a proof of concept project demonstrating logging of traceIds and spanIds across 
+    SpringBoot microservices and integrating it with Jaeger for visualization and analysis. 
+    All the applications are deployed using Docker and Kubernetes(Service Mesh).
+  gitRepository: "https://github.com/Microservices-Demo-Projects/logging-and-distributed-tracing"

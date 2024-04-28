@@ -26,6 +26,14 @@ $ npm i bootstrap@5.3.3
     }
 ```
 
+```
+npm install yaml
+ng generate service services/PortfolioData
+```
+
+
+
+
 # Build Application for Github Pages Deployment:
 ng build --configuration production --base-href https://[username].github.io/[repo]/
 
@@ -37,4 +45,4 @@ Example:
 ng build --configuration production --base-href https://sriram-ponangi.github.io/
 ```
 
-Rename the generated dist directory to docs
+> Rename the generated dist directory to docs
