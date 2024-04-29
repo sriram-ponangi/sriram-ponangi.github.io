@@ -21,6 +21,7 @@ profileInfo:
     github:
       displayName: www.github.com/sriram-ponangi
       link: https://github.com/sriram-ponangi
+  allBadgesLink: https://www.credly.com/users/ponangi-sriram/badges
   badges:
   - name: "Certified Kubernetes Administrator"
     imageUrl: "/assets/img/certs/cka.png"

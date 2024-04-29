@@ -111,15 +111,15 @@
   <div class="row mt-3">
     <div class="col-md-3">
       <div class="row">
-        <h1>{{data.profileInfo.name}}</h1>
+        <h1>{{data?.profileInfo?.name}}</h1>
       </div>
 
       <div class="row" style="padding-bottom: 1rem ;">
-        <img [src]="data.profileInfo.profilePictureUrl" alt="Profile Picture" class="img-fluid rounded">
+        <img [src]="data?.profileInfo?.profilePictureUrl" alt="Profile Picture" class="img-fluid rounded">
       </div>
 
       <div class="row">
-        <p [innerHTML]="data.profileInfo.description"></p>
+        <p [innerHTML]="data?.profileInfo?.description"></p>
       </div>
 
       <div class="row">
@@ -127,28 +127,28 @@
       </div>
 
       <div class="row">
-        <a [href]="data.profileInfo.contact.location.link">
+        <a [href]="data?.profileInfo?.contact?.location?.link">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
             viewBox="0 0 16 16">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
           </svg>
-          <small style="padding-left: 1mm ;">{{data.profileInfo.contact.location.displayName}}</small>
+          <small style="padding-left: 1mm ;">{{data?.profileInfo?.contact?.location?.displayName}}</small>
         </a>
       </div>
 
       <div class="row">
-        <a [href]="data.profileInfo.contact.linkedin.link">
+        <a [href]="data?.profileInfo?.contact?.linkedin?.link">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
             viewBox="0 0 16 16">
             <path
               d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
           </svg>
-          <small style="padding-left: 1mm ;">{{data.profileInfo.contact.linkedin.displayName}}</small>
+          <small style="padding-left: 1mm ;">{{data?.profileInfo?.contact?.linkedin?.displayName}}</small>
         </a>
       </div>
 
       <div class="row">
-        <a [href]="data.profileInfo.contact.email.link">
+        <a [href]="data?.profileInfo?.contact?.email?.link">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 32 32">
             <path fill="#e83815"
               d="M16,20.5l8-5.815V26h4c1.1,0,2-0.899,2-1.997V9.717c0-3.421-2.993-4.69-5.5-2.922	C22.372,8.296,16,13,16,13S9.628,8.296,7.5,6.795C4.993,5.028,2,6.296,2,9.717v14.286C2,25.101,2.9,26,4,26h4V14.685L16,20.5z">
@@ -166,32 +166,32 @@
               d="M28,27h-5V16.647l-7,5.089l-7-5.089V27H4c-1.654,0-3-1.345-3-2.997V9.717	c0-1.955,0.837-3.511,2.298-4.269c1.454-0.752,3.239-0.556,4.778,0.529c1.729,1.22,6.289,4.574,7.924,5.78	c1.635-1.206,6.195-4.561,7.924-5.78c1.537-1.085,3.325-1.281,4.778-0.529C30.163,6.206,31,7.762,31,9.717v14.286	C31,25.655,29.654,27,28,27z M25,25h3c0.551,0,1-0.447,1-0.997V9.717c0-1.183-0.444-2.091-1.218-2.492	c-0.777-0.404-1.789-0.257-2.706,0.388c-2.095,1.478-8.418,6.146-8.482,6.192L16,14.243l-0.594-0.438	c-0.064-0.047-6.388-4.715-8.482-6.192C6.007,6.967,4.996,6.819,4.218,7.225C3.444,7.626,3,8.534,3,9.717v14.286	C3,24.553,3.449,25,4,25h3V13.979l1-0.531l8,5.815l8-5.815l1,0.531V25z">
             </path>
           </svg>
-          <small style="padding-left: 1mm ;">{{data.profileInfo.contact.email.displayName}}</small>
+          <small style="padding-left: 1mm ;">{{data?.profileInfo?.contact?.email?.displayName}}</small>
         </a>
       </div>
 
       <div class="row">
-        <a [href]="data.profileInfo.contact.github.link">
+        <a [href]="data?.profileInfo?.contact?.github?.link">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16" style="color: black;">
             <path
               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
           </svg>
-          <small style="padding-left: 1mm ;">{{data.profileInfo.contact.github.displayName}}</small>
+          <small style="padding-left: 1mm ;">{{data?.profileInfo?.contact?.github?.displayName}}</small>
         </a>
       </div>
 
       <div class="row" style="padding-top: 1rem ;">
-        <h3><a href="https://www.credly.com/users/ponangi-sriram/badges" class="link-underline link-underline-opacity-0"
+        <h3><a [href]="data?.profileInfo?.allBadgesLink" class="link-underline link-underline-opacity-0"
             style="color: black;">Badges</a></h3>
       </div>
 
       <div class="row" style="padding-top: 1rem; padding-bottom: 2rem;">
 
-        @for ( badges of data.profileInfo.badges; track badges.name) {
+        @for ( badges of data?.profileInfo?.badges; track badges?.name) {
         <div class="col-6">
-          <a [href]="badges.verificationLink">
-            <img [src]="badges.imageUrl" [alt]="badges.name" class="img-fluid">
+          <a [href]="badges?.verificationLink">
+            <img [src]="badges?.imageUrl" [alt]="badges?.name" class="img-fluid">
           </a>
         </div>
         }
@@ -237,12 +237,12 @@
         <div class="card mb-3">
           <div class="card-body">
 
-            @for (skill of data.skills; track skill.title) {
+            @for (skill of data?.skills; track skill?.title) {
             <div class="row card-text">
-              <h5>{{skill.title}}</h5>
+              <h5>{{skill?.title}}</h5>
               <small>
                 <ul>
-                  <li [innerHTML]="skill.details"></li>
+                  <li [innerHTML]="skill?.details"></li>
                 </ul>
               </small>
             </div>
@@ -275,24 +275,24 @@
         <div class="card mb-3">
           <div class="card-body">
 
-            @for (edu of data.education; track edu.title) {
+            @for (edu of data?.education; track edu?.title) {
             <div class="row" style="padding-bottom: 1rem;">
               <!-- DEGREE NAME: -->
               <div class="row card-title">
                 <div class="col-md-9">
-                  <h5 class="text-wrap">{{edu.title}}</h5>
+                  <h5 class="text-wrap">{{edu?.title}}</h5>
                 </div>
                 <div class="col-md-2 offset-md-1">
-                  <p class="badge text-bg-dark rounded-pill float-end">{{edu.timePeriod}}</p>
+                  <p class="badge text-bg-dark rounded-pill float-end">{{edu?.timePeriod}}</p>
                 </div>
               </div>
               <!-- GPA & INSTITUTION NAME: -->
               <div class="row">
                 <p class="text-wrap">
-                  <strong>GPA:</strong> {{edu.cgpa}}
+                  <strong>GPA:</strong> {{edu?.cgpa}}
                   <strong> | </strong>
-                  <strong>Institution: <a [href]="edu.institutionLink"
-                      class="link-underline link-underline-opacity-0">{{edu.institutionName}}</a> </strong>
+                  <strong>Institution: <a [href]="edu?.institutionLink"
+                      class="link-underline link-underline-opacity-0">{{edu?.institutionName}}</a> </strong>
                 </p>
               </div>
               <!-- COURSE DESCRIPTION: -->
@@ -300,7 +300,7 @@
                 <h6>Relevant Courses:</h6>
                 <small>
                   <ul>
-                    @for (course of edu.relevantCourses; track course) {
+                    @for (course of edu?.relevantCourses; track course) {
                     <li [innerHTML]="course"></li>
                     }
                   </ul>
@@ -342,31 +342,31 @@
         </a>
 
 
-        @for (exp of data.experience; track exp.company) {
+        @for (exp of data?.experience; track exp?.company) {
         <div class="card mb-3">
 
-          @for (role of exp.roles; track role.roleTitle) {
+          @for (role of exp?.roles; track role?.roleTitle) {
           <div class="card-body">
             <!-- COMPANY & JOB ROLE: -->
             <div class="row" style="padding-bottom: 1rem;">
               <!-- ROLE & COMPANY NAME: -->
               <div class="row card-title">
                 <div class="col-md-9">
-                  <h5 class="text-wrap">{{role.roleTitle}}, {{exp.company}}</h5>
+                  <h5 class="text-wrap">{{role?.roleTitle}}, {{exp?.company}}</h5>
                 </div>
                 <div class="col-md-2 offset-md-1">
-                  <p class="badge text-bg-dark rounded-pill float-end">{{role.timePeriod}}</p>
+                  <p class="badge text-bg-dark rounded-pill float-end">{{role?.timePeriod}}</p>
                 </div>
               </div>
               <!-- TEAM & PROJECT NAME: -->
               <div class="row">
-                <p class="fw-lighter">{{role.teamAndProjectTitle}}</p>
+                <p class="fw-lighter">{{role?.teamAndProjectTitle}}</p>
               </div>
               <!-- WORK DESCRIPTION: -->
               <div class="row card-text">
                 <small>
                   <ul>
-                    @for (detail of role.details; track detail) {
+                    @for (detail of role?.details; track detail) {
                     <li [innerHTML]="detail"></li>
                     }
                   </ul>
@@ -434,25 +434,25 @@
         </a>
 
         <div class="row">
-          @for (project of data.projects; track project.title) {
+          @for (project of data?.projects; track project?.title) {
           <div class="col-lg-6">
             <div class="card mt-2">
-              <img class="card-img-top" [src]="project.logoUrl" alt="Card image cap">
+              <img class="card-img-top" [src]="project?.logoUrl" alt="Card image cap">
               <div class="card-body">
-                <p class="card-title fw-bolder fs-5">{{project.title}}</p>
+                <p class="card-title fw-bolder fs-5">{{project?.title}}</p>
                 <p class="fw-bold fs-6 fst-italic">Technologies Used</p>
                 <span class="card-text fw-light">
                   <ul>
-                    <li>{{project.technologiesUsed}}</li>
+                    <li>{{project?.technologiesUsed}}</li>
                   </ul>
                 </span>
                 <p class="fw-bold fs-6 fst-italic">Description</p>
                 <span class="card-text fw-light">
                   <ul>
-                    <li>{{project.description}}</li>
+                    <li>{{project?.description}}</li>
                   </ul>
                 </span>
-                <a [href]="project.gitRepository" class="btn btn-dark btn-lg">
+                <a [href]="project?.gitRepository" class="btn btn-dark btn-lg">
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                     class="bi bi-github" viewBox="0 0 16 16" style="color: white;">
                     <path
