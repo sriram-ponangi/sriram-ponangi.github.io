@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map, mergeMap, switchMap } from 'rxjs';
-import { parse, stringify } from 'yaml'
+import { Observable, catchError, map, of, switchMap } from 'rxjs';
+import { parse } from 'yaml';
 
 @Injectable({
   providedIn: 'root'
@@ -40,10 +40,18 @@ export class PortfolioDataService {
           observe: 'body',
           responseType: "text"   // This one here tells HttpClient to parse it as text, not as JSON
         }).pipe(
-          // Map Yaml to JavaScript Object
-          map(yamlString => parse(yamlString))
+          map((yamlString: string) => parse(yamlString)),
+          catchError((err) => {
+            console.error('Failed to load portfolio data', err);
+            return of(null);
+          })
         )
         )
+    ).pipe(
+      catchError((err) => {
+        console.error('Failed to load portfolio config or data', err);
+        return of(null);
+      })
     );
 
   }
