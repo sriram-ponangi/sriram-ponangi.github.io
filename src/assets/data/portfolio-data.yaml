@@ -5,9 +5,9 @@ profileInfo:
   name: "Sriram Ponangi"
   profilePictureUrl: "assets/img/sriram.jpg"
   description: |
-    <strong>Full Stack Developer</strong> and <strong>DevOps Engineer</strong> with experience primarily in the 
+    <strong>Lead Application Developer</strong> and <strong>DevOps Engineer</strong> with experience primarily in the 
     development of cloud-native applications, developing CI/CD pipelines, creating infrastructure as code, 
-    automating orchestration and deployment of container-based workloads.
+    automating orchestration and deployment of containerized workloads.
   contact:
     location:
       displayName: "Halifax, Nova Scotia, Canada"
@@ -29,6 +29,9 @@ profileInfo:
   - name: "AWS Knowledge: Amazon EKS"
     imageUrl: "/assets/img/certs/eks.png"
     verificationLink: https://www.credly.com/badges/85f60743-ce64-4495-b92d-cc5f826fc81a/public_url
+  - name: "Intermediate Kubernetes Operators"
+    imageUrl: "/assets/img/certs/k8s-operator-intermediate.png"
+    verificationLink: https://www.credly.com/badges/e91f4ae9-7993-4059-94e4-023afafcc59a/public_url
   - name: "Building Scalable Systems"
     imageUrl: "/assets/img/certs/building-scalable-systems.png"
     verificationLink: https://www.credly.com/badges/bb205754-0b94-4ecc-b429-464f39e7ce8b/public_url
@@ -47,7 +50,12 @@ profileInfo:
   - name: "Banking Insights and Solutions Silver"
     imageUrl: "/assets/img/certs/banking-insights-and-solutions-silver.png"
     verificationLink: https://www.credly.com/badges/9bbf76d4-c0ad-4c61-9061-481c9d6548ce/public_url
-
+  - name: "Generative AI: Watsonx Code Assistant"
+    imageUrl: "/assets/img/certs/GenAI-WatsonxCodeAssistantL2.png"
+    verificationLink: https://www.credly.com/badges/8ae9a1b4-7771-49c7-bf33-4a3011956497/public_url
+  - name: "Generative AI: Watsonx Essentials"
+    imageUrl: "/assets/img/certs/GenAI-WatsonxEssentialsL1.png"
+    verificationLink: https://www.credly.com/badges/8de5632a-619d-42cf-9e76-def7a39efcaa/public_url
 
 
 
@@ -58,17 +66,21 @@ profileInfo:
 skills:
 - title: "DevOps"
   details: |
-    Containers (Dockers / Podman), Kubernetes / OpenShift, AWS, Jenkins, GitHub Actions, GitLab CI/CD, 
-    Maven, NPM, SonarQube, JFrog Artifactory, Istio, Envoy, Nginx, Apache Kafka, RedHat / CentOS, Ubuntu, Jira, Confluence
+    Containers (Docker / Podman), Kubernetes / OpenShift, Helm, Service Mesh (Istio), Terraform, AWS, 
+    Jenkins, GitHub Actions, GitLab CI/CD, Maven, NPM, Liquibase, SonarQube, Nexus / JFrog Artifactory, 
+    Nginx, Apache Kafka, Linux (RedHat / CentOS, Ubuntu), Jira, Confluence
 - title: "Programming / Scripting Languages"
-  details: Java, JavaScript, Python, Bash, TypeScript, HTML, SQL(Liquibase)
-- title: "Frameworks / Libraries"
-  details: Spring Boot, Node.js / Express.js, Angular, Bootstrap
+  details: |
+    Java, Python, JavaScript / TypeScript, HTML, SQL, Bash
+- title: "Frameworks"
+  details: |
+    Spring Boot, FastAPI, LangChain, Express.js, Angular
 - title: "API"
-  details: XML, JSON, YAML, REST, SOAP, gRPC (Protocol Buffers), GraphQL, OpenAPI / Swagger
+  details: |
+    XML, JSON, YAML, REST, SOAP, gRPC (Protocol Buffers), GraphQL, OpenAPI / Swagger
 - title: "Database"
-  details: MySQL, MongoDB, Redis, PostgreSQL, Neo4j, AWS DynamoDB
-
+  details: |
+    MySQL, PostgreSQL, IBM DB2, MongoDB, Redis, Neo4j, AWS DynamoDB
 
 #############################################################################
 # EDUCATION
@@ -81,8 +93,8 @@ education:
   institutionName: "Dalhousie University, Canada"
   institutionLink: "https://www.dal.ca/"
   relevantCourses:
-  - "Advanced Software Development (CI/CD, TDD, SOLID Principles, Design Patterns, Clean Coding Principles)"
-  - "Advanced Cloud Computing (Serverless, AWS, Azure, Distributed Transactions - 2PC / SAGA, Dockers, Kubernetes)"
+  - "Advanced Software Development (CI/CD, TDD, SOLID Principles, Design Patterns, Clean Code & Architecture)"
+  - "Advanced Cloud Computing (Serverless, AWS, Distributed Transactions - 2PC / SAGA, Containers, Kubernetes)"
   - "Data Management (MySQL, NoSQL - MongoDB, Neo4j, Data Warehouse Design, Hadoop / Spark, Tableau)"
   - "Machine Learning & Visual Analytics (Classification, Regression, Clustering, NLP, Neural Networks)"
 
@@ -109,17 +121,24 @@ experience:
       timePeriod: "01/2023 - present"
       teamAndProjectTitle: "Hybrid Cloud Services Team | Scotiabank Cheque Processing Project"
       details:
-      - "Implemented non-functional features, including mTLS (PKCS12 keystore and truststore), OAuth(Client Credentials Flow and Authorization Code), and externalizing properties with dynamic secret generation and rotation."
-      - "Developed automation scripts for packaging and deploying containerized apps on OpenShift in the cloud and standalone apps running on on-premise servers, utilizing Python, maven assembly, systemd unit files, Podman container files, and Helm charts."
-      - "Addressed challenges by minimizing app coupling to facilitate easier build and deployment."
-      - "Formulated DevOps strategy encompassing git branching strategy, app versioning, CI/CD pipeline design, configuration/secrets management, code promotion across multiple testing teams and environments, and SQL Scripts change log management using Liquibase."
-    
+      - "Designed and implemented a DevOps and release management strategy for deploying applications on OpenShift, aligned with client governance and release requirements. Defined GitHub branching strategy, application versioning model, and JFrog Artifactory repository structure."
+      - "Defined an end-to-end DevOps strategy covering CI/CD pipeline design, configuration and secrets management, controlled code promotion across multiple testing teams and environments, and SQL change-log management using Liquibase."
+      - "Created and maintained custom Helm charts integrating external secrets, certificate issuers, and automated certificate rotation, enforcing OpenShift security best practices (restricted-v2 SCCs, read-only root filesystems, etc.) and enabling dynamic reload of secrets and ConfigMaps."
+      - "Standardized application observability by exposing internal actuator endpoints with restricted network policies, and implemented structured logging with trace IDs, span IDs, and MDC properties to support better traceability and debugging capabilities across microservices. "
+      - "Designed and developed reusable Bash scripts used in CI/CD pipelines to deploy IBM FTM4C product's customization code, configuration artifacts, and environment-specific assets."
+      - "Built automation for packaging and deploying both containerized applications on OpenShift and standalone applications on on-premise servers using Bash, Python, Maven Assembly, systemd unit files, Podman container files, and Helm charts."
+      - "Created High-Level Designs (HLDs) and led the migration of a legacy cheque-processing system to a cloud-native OpenShift platform by refactoring and redesigning the codebase to improve scalability, performance, and maintainability, while ensuring seamless integration with other existing on-premise systems."
+      - "Implemented enterprise-grade non-functional requirements, including mTLS using PKCS12 keystores / truststores, OAuth authentication (Client Credentials and Authorization Code flows), and externalized configuration with dynamic secret generation and rotation."
+      - "Designed and implemented a future-date testing solution in OpenShift using a custom Java instrumentation agent to intercept JVM time APIs at runtime. Deployed the agent selectively in test environments, enabling future-date testing without modifying application code, configuration, or shared cluster infrastructure."
+
     - roleTitle: "Full Stack Developer"
       timePeriod: "09/2021 - 12/2022"
       teamAndProjectTitle: "Hybrid Cloud Services Team | Scotiabank Cheque Processing Project"
       details:
-      - "Architected and implemented a suite of highly configurable applications for processing X937 files containing cheque images and metadata. Developed a highly available and fault-tolerant file gateway application to monitor, validate, transform, and seamlessly transfer files to downstream apps. And developed other microservices for file tracking, alerting, displaying insights and performing updates on the received files on a dashboard."
-      - "Designed and developed batch-processing applications to generate, and process various types of reports and extracts scheduled throughout the day with fixed timings and strict SLAs."
+      - "Designed and developed a highly available file-gateway application to monitor, validate, transform, and reliably transfer files to downstream systems primarily over SFTP." 
+      - "Designed and built resilient batch-processing applications to generate reports and extracts on fixed schedules, meeting strict SLAs and operational timelines." 
+      - "Designed and developed highly configurable, cloud-native applications for processing X937 files containing cheque images and metadata, focusing on scalability, resilience, and fault tolerance."
+      - "Developed microservices for file tracking, alerting, insight visualization, and dashboard-driven updates to improve operational visibility and traceability."
 
 
 - company: "Canada Revenue Agency"
@@ -139,33 +158,33 @@ experience:
       timePeriod: "01/2021 - 08/2021"
       teamAndProjectTitle: "Adv. Cloud Computing Course"
       details:
-      - "Developed and demonstrated proof of concept applications live during lab sessions to 150 students, on various services from AWS like Serverless (API Gateway, Lambda, SQS, DynamoDB, S3) and Dockers & Kubernetes (EKS)."
+      - "Developed and demonstrated proof of concept applications live during lab sessions to 150 students, on various services from AWS like Serverless (API Gateway, Lambda, SQS, DynamoDB, S3) and Docker/Kubernetes (EKS)."
       - "Helped teams create CI/CD pipelines using the GitLab runners to execute the tests, build and deploy to AWS."
-      - "Mentored 50-plus students to develop projects using AWS while resolving conflicts among the student groups."
+      - "Mentored 50-plus students to develop their group projects using AWS while resolving conflicts among the student groups."
 
 - company: "Verizon"
   roles:
     - roleTitle: "Member of Technical Staff - 2"
       timePeriod: "01/2019 - 11/2019"
       teamAndProjectTitle: "Managed Security Services Team"
-      details:
-      - "Developed, deployed and maintained applications in Kubernetes clusters, both on-premise (Kubeadm) and cloud (EKS - AWS). It helped teams focus on business needs by becoming language agnostic and reducing maintenance effort."
-      - "Developed and deployed I/O intense microservice applications in Spring boot / Webflux and node.js/express.js to handle the huge traffic from the security incidents being sent to the Security Operations Center (SOC) analysts."
-      - "Developed playbooks for Security Orchestration, Automation and Response (SOAR) applications using Python. It significantly helped the SOC analysts, by filtering out the false positive security alerts."
-      - "Automated creation of weekly bug/security incident reports using Python, Google Apps Scripts, and Linux cron jobs, which saved 8 hours of monotonous work every week."
-      - "Improved performance of a legacy SOAR application in Java by 90%, for some of its frequently used features. Which boosted the efficiency of our SOC analysts and led to a huge increase in customer satisfaction."
-      - "Trained team members with weekly knowledge share sessions on topics like “Microservices Architecture & System Design Patterns” and “Dockers & Kubernetes”, which improved the team’s overall skill."
+      details:      
+      - "Developed and operated applications on Kubernetes across on-premise (kubeadm) and AWS EKS environments, standardizing security, logging, observability, and caching using language-agnostic platform patterns."
+      - "Developed and deployed high-throughput, I/O intensive microservices using Spring Boot/WebFlux and Node.js/Express to handle large volumes of security incident traffic for Security Operations Center (SOC) analysts."
+      - "Developed Security Orchestration, Automation and Response (SOAR) playbooks in Python to automate incident response workflows and significantly reduce false-positive alerts."
+      - "Automated weekly bug and security incident reporting using Python, Google Apps Script, and Linux cron, saving approximately 8 hours per week."
+      - "Optimized a legacy Java-based SOAR application by identifying network bottlenecks, batching and tuning database queries, reducing heap usage, and improving code and configuration, resulting in 90% performance improvement and higher SOC analyst efficiency."
+      - "Led weekly knowledge sharing sessions on microservices architecture, system design patterns, Docker, and Kubernetes to upskill the team."
+
 
     - roleTitle: "Member of Technical Staff - 1"
       timePeriod: "06/2017 - 12/2018"
       teamAndProjectTitle: "Networking & Telecommunications Team"
       details:
-      - "Developed and deployed other microservices for tracking the technicians and assigning them jobs, primarily using Netflix OSS stack in Spring boot/cloud and RedHat/CentOS."
+      - "Developed and deployed microservices for tracking the technicians and assigning them jobs, primarily using Netflix OSS stack in Spring boot/cloud and RedHat/CentOS."
       - "Designed and developed logging and monitoring dashboards for microservices using the ELK-Stack."
       - "Deployed and integrated Redis cluster with the microservices for caching."
-      - "Designed event-driven microservices related to the dispatch and mobility of technicians using Spring Boot and Apache Kafka as a messaging queue. It made systems loosely coupled and simplified communications among them."
-      - "Improved performance of a legacy SOAR application in Java by 90%, for some of its frequently used features. Which boosted the efficiency of our SOC analysts and led to a huge increase in customer satisfaction."
-      - "Written technical specifications and documentation in Atlassian’s Confluence tool, which assisted in providing efficient knowledge transfer/onboarding to the new team members and acted as a reference for others."
+      - "Designed event-driven microservices related to the dispatch and mobility of technicians using Spring Boot and Apache Kafka as a messaging queue, creating loosely-coupled communication."
+      - "Written technical specifications and documentation in Atlassian's Confluence tool, facilitating efficient knowledge transfer and onboarding for new team members."
 
 
 
@@ -174,10 +193,38 @@ experience:
 #############################################################################
 projects:
 - title: "Distributed Log Tracing Using Jaeger"
-  logoUrl: "/assets/img/projects/HighLevelDesign.png"
-  technologiesUsed: "Spring boot, JUNIT, Maven, Kubernetes / Openshift (Service Mesh), Jaeger"
+  logoUrl: "/assets/img/projects/LogTracingProjectHLD.png"
+  technologiesUsed: |
+    <ul>
+      <li>Spring boot, JUNIT, Maven, Kubernetes / Openshift (Service Mesh), Jaeger</li>
+    </ul>
   description: |
-    This is a proof of concept project demonstrating logging of traceIds and spanIds across 
-    SpringBoot microservices and integrating it with Jaeger for visualization and analysis. 
-    All the applications are deployed using Docker and Kubernetes(Service Mesh).
+    <ul>
+      <li>This is a proof of concept project demonstrating logging of traceIds and spanIds across 
+          SpringBoot microservices and integrating it with Jaeger for visualization and analysis. 
+          All the applications are deployed using Docker and Kubernetes(Service Mesh).
+      </li>
+    </ul>
   gitRepository: "https://github.com/Microservices-Demo-Projects/logging-and-distributed-tracing"
+
+- title: "Serverless Expense Tracker App"
+  logoUrl: "/assets/img/projects/ServerlessExpenseTrackerHLD.png"
+  technologiesUsed: |
+    <ul>
+      <li>Angular, AWS Lambda (Node.js), Amazon API Gateway, Amazon Cognito, Amazon DynamoDB, Serverless Framework, GitHub Actions</li>
+    </ul>
+  description: |
+    <ul>
+      <li>
+          A full-stack serverless application that lets users track personal expenses.
+          The frontend is an <strong>Angular</strong> single-page application (SPA) hosted on GitHub Pages or an S3 bucket.
+          The backend runs on <strong>AWS Lambda</strong> (Node.js) behind <strong>Amazon API Gateway</strong>, with authentication
+          and authorization provided by <strong>Amazon Cognito</strong>. Expense data is persisted in <strong>Amazon DynamoDB</strong>.
+      </li>
+
+      <li>
+        <strong>CI/CD</strong> The repository uses <strong>GitHub Actions</strong> to run unit tests, linting, and automatically deploy the
+        Serverless backend (via the Serverless Framework) and the Angular frontend to GitHub Pages.
+      </li>
+    </ul>
+  gitRepository: "https://github.com/sriram-ponangi/expense_tracker"
