@@ -188,6 +188,36 @@ experience:
 # PROJECTS
 #############################################################################
 projects:
+- title: "Kubernetes GitOps Cluster Provisioing Automation"
+  logoUrl: "/assets/img/projects/K8sGitOpsClusterProvisioing.png"
+  technologiesUsed: |
+    <ul>
+      <li>
+        Kubernetes / OpenShift, ArgoCD, GitHub, Helm, Kustomize, Cert-Manager, HashiCorp Vault, External Secrets Operator, 
+        PostgreSQL, Apache Kafka, Stakater Reloader, Headlamp, other middleware & custom demo apps.
+      </li>
+    </ul>
+  description: |
+    <ul>
+      <li>
+        This project sets up an automated GitOps pipeline using ArgoCD to deploy and manage core infrastructure, security tools, 
+        and shared services inside a Kubernetes / OpenShift cluster. Instead of manually applying manifests, the entire cluster state is 
+        defined declaratively in a GitHub repository and synced automatically.
+      </li>
+
+      <li>
+        The pipeline combines Helm and Kustomize to keep configurations modular, DRY, and reusable across environments. 
+        The deployed stack provides baseline platform capabilities right out of the box: 
+        <strong>HashiCorp Vault and External Secrets Operator</strong> for secure credential injection, 
+        <strong>Cert-Manager</strong> for automated SSL/TLS certificates, 
+        <strong>PostgreSQL and Apache Kafka</strong> for data and messaging layers, 
+        <strong>Stakater Reloader</strong> for seamless rolling updates,
+        <strong>Headlamp</strong> as a clean UI dashboard, etc. 
+        The architecture is modularly structured, making it easy to onboard extra middleware or custom application workloads.
+      </li>
+    </ul>
+  gitRepository: "https://github.com/Microservices-Demo-Projects/gitops-platform-bootstrap"
+
 - title: "Distributed Log Tracing Using Jaeger"
   logoUrl: "/assets/img/projects/LogTracingProjectHLD.png"
   technologiesUsed: |
@@ -224,33 +254,3 @@ projects:
       </li>
     </ul>
   gitRepository: "https://github.com/sriram-ponangi/expense_tracker"
-
-- title: "Kubernetes GitOps Cluster Provisioing Automation"
-  logoUrl: "/assets/img/projects/K8sGitOpsClusterProvisioing.png"
-  technologiesUsed: |
-    <ul>
-      <li>
-        Kubernetes / OpenShift, ArgoCD, GitHub, Helm, Kustomize, Cert-Manager, HashiCorp Vault, External Secrets Operator, 
-        PostgreSQL, Apache Kafka, Stakater Reloader, Headlamp, other middleware & custom demo apps.
-      </li>
-    </ul>
-  description: |
-    <ul>
-      <li>
-        This project sets up an automated GitOps pipeline using ArgoCD to deploy and manage core infrastructure, security tools, 
-        and shared services inside a Kubernetes / OpenShift cluster. Instead of manually applying manifests, the entire cluster state is 
-        defined declaratively in a GitHub repository and synced automatically.
-      </li>
-
-      <li>
-        The pipeline combines Helm and Kustomize to keep configurations modular, DRY, and reusable across environments. 
-        The deployed stack provides baseline platform capabilities right out of the box: 
-        <strong>HashiCorp Vault and External Secrets Operator</strong> for secure credential injection, 
-        <strong>Cert-Manager</strong> for automated SSL/TLS certificates, 
-        <strong>PostgreSQL and Apache Kafka</strong> for data and messaging layers, 
-        <strong>Stakater Reloader</strong> for seamless rolling updates,
-        <strong>Headlamp</strong> as a clean UI dashboard, etc. 
-        The architecture is modularly structured, making it easy to onboard extra middleware or custom application workloads.
-      </li>
-    </ul>
-  gitRepository: "https://github.com/Microservices-Demo-Projects/platform-charts"
