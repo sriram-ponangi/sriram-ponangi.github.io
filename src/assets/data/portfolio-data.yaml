@@ -218,20 +218,6 @@ projects:
     </ul>
   gitRepository: "https://github.com/Microservices-Demo-Projects/gitops-platform-bootstrap"
 
-- title: "Distributed Log Tracing Using Jaeger"
-  logoUrl: "/assets/img/projects/LogTracingProjectHLD.png"
-  technologiesUsed: |
-    <ul>
-      <li>Spring boot, JUNIT, Maven, Kubernetes / Openshift (Service Mesh), Jaeger</li>
-    </ul>
-  description: |
-    <ul>
-      <li>This is a proof of concept project demonstrating logging of traceIds and spanIds across 
-          SpringBoot microservices and integrating it with Jaeger for visualization and analysis. 
-          All the applications are deployed using Docker and Kubernetes(Service Mesh).
-      </li>
-    </ul>
-  gitRepository: "https://github.com/Microservices-Demo-Projects/logging-and-distributed-tracing"
 
 - title: "Serverless Expense Tracker App"
   logoUrl: "/assets/img/projects/ServerlessExpenseTrackerHLD.png"
@@ -254,3 +240,18 @@ projects:
       </li>
     </ul>
   gitRepository: "https://github.com/sriram-ponangi/expense_tracker"
+
+- title: "Distributed Log Tracing Using Jaeger"
+  logoUrl: "/assets/img/projects/LogTracingProjectHLD.png"
+  technologiesUsed: |
+    <ul>
+      <li>Spring boot, JUNIT, Maven, Kubernetes / Openshift (Service Mesh), Jaeger</li>
+    </ul>
+  description: |
+    <ul>
+      <li>This is a proof of concept project demonstrating logging of traceIds and spanIds across 
+          SpringBoot microservices and integrating it with Jaeger for visualization and analysis. 
+          All the applications are deployed using Docker and Kubernetes(Service Mesh).
+      </li>
+    </ul>
+  gitRepository: "https://github.com/Microservices-Demo-Projects/logging-and-distributed-tracing"

@@ -1,6 +1,6 @@
 # SriramPonangiGithubIo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 22.0.5.
 
 ## Development server
 
@@ -21,6 +21,58 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Updating Node.js and Angular
+
+This project should stay on an Angular-supported Node.js version. Angular only officially supports **even-numbered LTS releases** of Node (e.g. 22, 24) — odd-numbered "Current" releases (23, 25, 26...) will trigger an unsupported-version warning from the Angular CLI.
+
+Check what's currently required:
+```shell
+ng version
+```
+This prints both the Angular CLI version and whether your current Node.js version is supported.
+
+### Updating Node.js (via Homebrew)
+
+```shell
+# Install the target LTS version (check angular.dev/reference/versions for the current supported range)
+brew install node@24
+
+# Switch the active linked version
+brew unlink node
+brew link --force --overwrite node@24
+hash -r
+
+# Verify
+node -v
+```
+
+### Updating the Angular CLI and project packages
+
+```shell
+# Update the global CLI
+npm install -g @angular/cli@latest
+
+# See what's outdated in this project
+ng update
+
+# Update Angular core + CLI together (keeps versions in sync)
+ng update @angular/cli @angular/core
+```
+
+> **Note:** If jumping more than one major version behind, update one major at a time (e.g. v20 → v21 → v22) rather than skipping — `ng update` only supports single-major jumps.
+
+`ng update` may prompt you to opt into optional migrations (e.g. moving to the esbuild-based application builder, or Karma → Vitest for testing). Review each one before accepting — some are safe defaults, others (like test runner changes) are worth handling as a separate, deliberate step if you have custom test config.
+
+### After updating
+
+```shell
+npm install
+ng build
+ng test
+ng serve
+```
+Commit your working tree *before* running `ng update`, so any auto-applied code migrations can be reviewed or reverted via git diff.
 
 ## Further help
 
@@ -62,6 +114,8 @@ $ npm i bootstrap@5.3.3
 npm install yaml
 ng generate service services/PortfolioData
 ```
+
+> **Note:** The `angular.json` snippet above reflects the original setup on the legacy Webpack-based builder. Since this project migrated to Angular's newer esbuild-based `application` builder (via `ng update`'s `use-application-builder` migration), the config keys in `angular.json` may differ slightly from what's shown here — e.g. the entry point key may now be `browser` instead of `main`, and `outputPath` may be an object rather than a string. Check your actual `angular.json` if reproducing this setup from scratch.
 
 # Steps to Deploy the Application into Github Pages:
 

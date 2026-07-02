@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PortfolioDataService } from './services/portfolio-data.service';
 
@@ -8,6 +8,7 @@ import { PortfolioDataService } from './services/portfolio-data.service';
   standalone: true,
   imports: [AsyncPipe, RouterOutlet],
   templateUrl: './app.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './app.component.css',
 })
 export class AppComponent {
