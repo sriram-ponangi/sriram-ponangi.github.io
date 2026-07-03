@@ -3,7 +3,7 @@
 #############################################################################
 profileInfo:
   name: "Sriram Ponangi"
-  profilePictureUrl: "assets/img/sriram.jpg"
+  profilePictureUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/sriram.jpg"
   description: |
     <strong>Lead Application Developer</strong> and <strong>DevOps Engineer</strong> with experience primarily in the 
     development of cloud-native applications, developing CI/CD pipelines, creating infrastructure as code, 
@@ -24,37 +24,37 @@ profileInfo:
   allBadgesLink: https://www.credly.com/users/ponangi-sriram/badges
   badges:
   - name: "Certified Kubernetes Administrator"
-    imageUrl: "/assets/img/certs/cka.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/cka.png"
     verificationLink: https://www.credly.com/badges/c99ccba2-8fdd-4b87-8fea-def9aa1b8280/public_url
   - name: "AWS Knowledge: Amazon EKS"
-    imageUrl: "/assets/img/certs/eks.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/eks.png"
     verificationLink: https://www.credly.com/badges/85f60743-ce64-4495-b92d-cc5f826fc81a/public_url
   - name: "Intermediate Kubernetes Operators"
-    imageUrl: "/assets/img/certs/k8s-operator-intermediate.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/k8s-operator-intermediate.png"
     verificationLink: https://www.credly.com/badges/e91f4ae9-7993-4059-94e4-023afafcc59a/public_url
   - name: "Building Scalable Systems"
-    imageUrl: "/assets/img/certs/building-scalable-systems.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/building-scalable-systems.png"
     verificationLink: https://www.credly.com/badges/bb205754-0b94-4ecc-b429-464f39e7ce8b/public_url
   - name: "Reactive Architecture Foundations"
-    imageUrl: "/assets/img/certs/reactive-architecture-foundations.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/reactive-architecture-foundations.png"
     verificationLink: https://www.credly.com/badges/a17aabd5-092e-4789-b518-67487e94e5d5/public_url
   - name: "Principles of Reactive Architecture"
-    imageUrl: "/assets/img/certs/principles-of-reactive-architecture.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/principles-of-reactive-architecture.png"
     verificationLink: https://www.credly.com/badges/d049690e-312d-4828-a648-890837ab5c79/public_url
   - name: "Oracle Certified Professional Java SE 6 Programmer"
-    imageUrl: "/assets/img/certs/oracle-certified-professional-java-se-6-programmer.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/oracle-certified-professional-java-se-6-programmer.png"
     verificationLink: https://www.credly.com/badges/34b2c048-c8e9-42a8-9b16-f4494f477616/public_url
   - name: "Angular App"
-    imageUrl: "/assets/img/certs/simple-angular-app.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/simple-angular-app.png"
     verificationLink: https://www.credly.com/badges/87d30299-fa22-4264-bcf0-2c4258c9c11d/public_url
   - name: "Banking Insights and Solutions Silver"
-    imageUrl: "/assets/img/certs/banking-insights-and-solutions-silver.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/banking-insights-and-solutions-silver.png"
     verificationLink: https://www.credly.com/badges/9bbf76d4-c0ad-4c61-9061-481c9d6548ce/public_url
   - name: "Generative AI: Watsonx Code Assistant"
-    imageUrl: "/assets/img/certs/GenAI-WatsonxCodeAssistantL2.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/GenAI-WatsonxCodeAssistantL2.png"
     verificationLink: https://www.credly.com/badges/8ae9a1b4-7771-49c7-bf33-4a3011956497/public_url
   - name: "Generative AI: Watsonx Essentials"
-    imageUrl: "/assets/img/certs/GenAI-WatsonxEssentialsL1.png"
+    imageUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/certs/GenAI-WatsonxEssentialsL1.png"
     verificationLink: https://www.credly.com/badges/8de5632a-619d-42cf-9e76-def7a39efcaa/public_url
 
 
@@ -189,7 +189,7 @@ experience:
 #############################################################################
 projects:
 - title: "Kubernetes GitOps Cluster Provisioing Automation"
-  logoUrl: "/assets/img/projects/K8sGitOpsClusterProvisioing.png"
+  logoUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/projects/K8sGitOpsClusterProvisioing.png"
   technologiesUsed: |
     <ul>
       <li>
@@ -223,7 +223,7 @@ projects:
 
 
 - title: "Serverless Expense Tracker App"
-  logoUrl: "/assets/img/projects/ServerlessExpenseTrackerHLD.png"
+  logoUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/projects/ServerlessExpenseTrackerHLD.png"
   technologiesUsed: |
     <ul>
       <li>Angular, AWS Lambda (Node.js), Amazon API Gateway, Amazon Cognito, Amazon DynamoDB, Serverless Framework, GitHub Actions</li>
@@ -245,7 +245,7 @@ projects:
   gitRepository: "https://github.com/sriram-ponangi/expense_tracker"
 
 - title: "Distributed Log Tracing Using Jaeger"
-  logoUrl: "/assets/img/projects/LogTracingProjectHLD.png"
+  logoUrl: "https://github.com/sriram-ponangi/sriram-ponangi.github.io/blob/portfolio-data/assets/img/projects/LogTracingProjectHLD.png"
   technologiesUsed: |
     <ul>
       <li>Spring boot, JUNIT, Maven, Kubernetes / Openshift (Service Mesh), Jaeger</li>
