@@ -117,6 +117,17 @@ education:
 experience:
 - company: "IBM"
   roles:
+    - roleTitle: "Senior DevSecOps Engineer"
+      timePeriod: "01/2026 - present"
+      teamAndProjectTitle: "Hybrid Cloud Services Team | Payments Canada - Real Time Rail Project"
+      details:
+      - Designed and implemented a <strong>GitOps-based release automation platform</strong> using Argo CD, Helm Charts, Kustomize, and OpenShift Operators to standardize deployments of Spring Boot microservices and middleware across <strong>18 OpenShift clusters</strong> spanning multiple environments and data centres.
+      - Architected and developed <strong>disaster recovery (DR) failover and failback automation</strong> using Jenkins pipelines, orchestrating coordinated recovery of databases, Spring Boot microservices, Red Hat AMQ, and middleware components to reduce manual recovery effort, improve operational consistency and most importantly meet the SLAs.
+      - Implemented a <strong>dynamic configuration, secrets, and certificate management solution</strong> integrating HashiCorp Vault, Spring Cloud Config, and Red Hat AMQ to enable secure runtime updates without application redeployments.
+      - Refactored deployment configurations into reusable <strong>Kustomize base and overlay templates</strong>, applying DRY principles to reduce configuration duplication and simplify environment-specific customization across multiple clusters.
+      - Defined the <strong>release branching, versioning, and rollback strategy</strong> by establishing Git workflows, automated release tagging, deployment promotion, and rollback processes, including Liquibase database rollback automation for scenarios where fix-forward was not feasible.
+      - Partnered with infrastructure, middleware, database, and application SMEs to standardize deployment patterns, CI/CD practices, and operational procedures for a mission-critical real-time payments platform.
+    
     - roleTitle: "Lead Application Developer"
       timePeriod: "01/2023 - present"
       teamAndProjectTitle: "Hybrid Cloud Services Team | Scotiabank Cheque Processing Project"
