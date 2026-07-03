@@ -116,7 +116,8 @@
       </div>
 
       <div class="row" style="padding-bottom: 1rem ;">
-        <img [src]="$safeNavigationMigration(data?.profileInfo?.profilePictureUrl)" alt="Profile" class="img-fluid rounded">
+        <img [src]="$safeNavigationMigration(data?.profileInfo?.profilePictureUrl)" alt="Profile"
+          class="img-fluid rounded">
       </div>
 
       <div class="row">
@@ -128,7 +129,8 @@
       </div>
 
       <div class="row">
-        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.location?.link)" target="_blank" rel="noopener noreferrer">
+        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.location?.link)" target="_blank"
+          rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
             viewBox="0 0 16 16">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
@@ -138,7 +140,8 @@
       </div>
 
       <div class="row">
-        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.linkedin?.link)" target="_blank" rel="noopener noreferrer">
+        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.linkedin?.link)" target="_blank"
+          rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin"
             viewBox="0 0 16 16">
             <path
@@ -149,7 +152,8 @@
       </div>
 
       <div class="row">
-        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.email?.link)" target="_blank" rel="noopener noreferrer">
+        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.email?.link)" target="_blank"
+          rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 32 32">
             <path fill="#e83815"
               d="M16,20.5l8-5.815V26h4c1.1,0,2-0.899,2-1.997V9.717c0-3.421-2.993-4.69-5.5-2.922	C22.372,8.296,16,13,16,13S9.628,8.296,7.5,6.795C4.993,5.028,2,6.296,2,9.717v14.286C2,25.101,2.9,26,4,26h4V14.685L16,20.5z">
@@ -172,7 +176,8 @@
       </div>
 
       <div class="row">
-        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.github?.link)" target="_blank" rel="noopener noreferrer">
+        <a [href]="$safeNavigationMigration(data?.profileInfo?.contact?.github?.link)" target="_blank"
+          rel="noopener noreferrer">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
             viewBox="0 0 16 16" style="color: black;">
             <path
@@ -182,17 +187,19 @@
         </a>
       </div>
 
-      <div class="row" style="padding-top: 1rem ;">
-        <h3><a [href]="$safeNavigationMigration(data?.profileInfo?.allBadgesLink)" class="link-underline link-underline-opacity-0"
-            style="color: black;" target="_blank" rel="noopener noreferrer">Badges</a></h3>
+      <div class="row d-none d-md-flex" style="padding-top: 1rem ;">
+        <h3><a [href]="$safeNavigationMigration(data?.profileInfo?.allBadgesLink)"
+            class="link-underline link-underline-opacity-0" style="color: black;" target="_blank"
+            rel="noopener noreferrer">Badges</a></h3>
       </div>
 
-      <div class="row" style="padding-top: 1rem; padding-bottom: 2rem;">
+      <div class="row d-none d-md-flex" style="padding-top: 1rem; padding-bottom: 2rem;">
 
         @for ( badges of data?.profileInfo?.badges; track badges?.name) {
         <div class="col-6" style="padding-top: 1rem;">
           <a [href]="$safeNavigationMigration(badges?.verificationLink)" target="_blank" rel="noopener noreferrer">
-            <img [src]="$safeNavigationMigration(badges?.imageUrl)" [alt]="$safeNavigationMigration(badges?.name)" class="img-fluid">
+            <img [src]="$safeNavigationMigration(badges?.imageUrl)" [alt]="$safeNavigationMigration(badges?.name)"
+              class="img-fluid">
           </a>
         </div>
         }
@@ -202,7 +209,7 @@
     </div>
 
 
-    <div class="col-md-8 offset-md-1">
+    <div class="col-md-8 offset-md-1 main-content">
 
 
 
@@ -279,12 +286,12 @@
             @for (edu of data?.education; track edu?.title) {
             <div class="row" style="padding-bottom: 1rem;">
               <!-- DEGREE NAME: -->
-              <div class="row card-title">
-                <div class="col-md-9">
+              <div class="row card-title align-items-start">
+                <div class="col-lg-9 col-md-7">
                   <h5 class="text-wrap">{{edu?.title}}</h5>
                 </div>
-                <div class="col-md-2 offset-md-1">
-                  <p class="badge text-bg-dark rounded-pill float-end">{{edu?.timePeriod}}</p>
+                <div class="col-lg-3 col-md-5 text-md-end mt-2 mt-md-0">
+                  <span class="badge text-bg-dark rounded-pill">{{edu?.timePeriod}}</span>
                 </div>
               </div>
               <!-- GPA & INSTITUTION NAME: -->
@@ -293,7 +300,8 @@
                   <strong>GPA:</strong> {{edu?.cgpa}}
                   <strong> | </strong>
                   <strong>Institution: <a [href]="$safeNavigationMigration(edu?.institutionLink)"
-                      class="link-underline link-underline-opacity-0" target="_blank" rel="noopener noreferrer">{{edu?.institutionName}}</a> </strong>
+                      class="link-underline link-underline-opacity-0" target="_blank"
+                      rel="noopener noreferrer">{{edu?.institutionName}}</a> </strong>
                 </p>
               </div>
               <!-- COURSE DESCRIPTION: -->
@@ -351,12 +359,12 @@
             <!-- COMPANY & JOB ROLE: -->
             <div class="row" style="padding-bottom: 1rem;">
               <!-- ROLE & COMPANY NAME: -->
-              <div class="row card-title">
-                <div class="col-md-9">
+              <div class="row card-title align-items-start">
+                <div class="col-lg-9 col-md-7">
                   <h5 class="text-wrap">{{role?.roleTitle}}, {{exp?.company}}</h5>
                 </div>
-                <div class="col-md-2 offset-md-1">
-                  <p class="badge text-bg-dark rounded-pill float-end">{{role?.timePeriod}}</p>
+                <div class="col-lg-3 col-md-5 text-md-end mt-2 mt-md-0">
+                  <span class="badge text-bg-dark rounded-pill">{{role?.timePeriod}}</span>
                 </div>
               </div>
               <!-- TEAM & PROJECT NAME: -->
@@ -436,7 +444,7 @@
 
         <div class="row">
           @for (project of data?.projects; track project?.title) {
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="card mt-2">
               <img class="card-img-top" [src]="$safeNavigationMigration(project?.logoUrl)" alt="Card cap">
               <div class="card-body">
@@ -450,12 +458,13 @@
                 </span>
                 <p class="fw-bold fs-6 fst-italic">Description</p>
                 <span class="card-text fw-light">
-                   <p [innerHTML]="$safeNavigationMigration(project?.description)"></p>
+                  <p [innerHTML]="$safeNavigationMigration(project?.description)"></p>
                   <!-- <ul>
                     <li>{{project?.description}}</li>
                   </ul> -->
                 </span>
-                <a [href]="$safeNavigationMigration(project?.gitRepository)" class="btn btn-dark btn-lg" target="_blank" rel="noopener noreferrer">
+                <a [href]="$safeNavigationMigration(project?.gitRepository)" class="btn btn-dark btn-lg" target="_blank"
+                  rel="noopener noreferrer">
                   <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                     class="bi bi-github" viewBox="0 0 16 16" style="color: white;">
                     <path
@@ -475,14 +484,14 @@
   </div>
 </div>
 } @else {
-  <div class="container-fluid text-center py-5">
-    <p class="lead">Loading portfolio...</p>
-  </div>
+<div class="container-fluid text-center py-5">
+  <p class="lead">Loading portfolio...</p>
+</div>
 }
 
-  <router-outlet />
+<router-outlet />
 
-  <!-- 
+<!-- 
 Next Features:
 - Instead of using the YAML link hardcoded to /assets/data/portfolio-data.yaml replace it with an environment variable.
 -->

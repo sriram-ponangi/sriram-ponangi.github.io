@@ -29,33 +29,15 @@ profileInfo:
   - name: "AWS Knowledge: Amazon EKS"
     imageUrl: "/assets/img/certs/eks.png"
     verificationLink: https://www.credly.com/badges/85f60743-ce64-4495-b92d-cc5f826fc81a/public_url
-  - name: "Intermediate Kubernetes Operators"
-    imageUrl: "/assets/img/certs/k8s-operator-intermediate.png"
-    verificationLink: https://www.credly.com/badges/e91f4ae9-7993-4059-94e4-023afafcc59a/public_url
   - name: "Building Scalable Systems"
     imageUrl: "/assets/img/certs/building-scalable-systems.png"
     verificationLink: https://www.credly.com/badges/bb205754-0b94-4ecc-b429-464f39e7ce8b/public_url
-  - name: "Reactive Architecture Foundations"
-    imageUrl: "/assets/img/certs/reactive-architecture-foundations.png"
-    verificationLink: https://www.credly.com/badges/a17aabd5-092e-4789-b518-67487e94e5d5/public_url
-  - name: "Principles of Reactive Architecture"
-    imageUrl: "/assets/img/certs/principles-of-reactive-architecture.png"
-    verificationLink: https://www.credly.com/badges/d049690e-312d-4828-a648-890837ab5c79/public_url
-  - name: "Oracle Certified Professional Java SE 6 Programmer"
-    imageUrl: "/assets/img/certs/oracle-certified-professional-java-se-6-programmer.png"
-    verificationLink: https://www.credly.com/badges/34b2c048-c8e9-42a8-9b16-f4494f477616/public_url
-  - name: "Angular App"
-    imageUrl: "/assets/img/certs/simple-angular-app.png"
-    verificationLink: https://www.credly.com/badges/87d30299-fa22-4264-bcf0-2c4258c9c11d/public_url
   - name: "Banking Insights and Solutions Silver"
     imageUrl: "/assets/img/certs/banking-insights-and-solutions-silver.png"
     verificationLink: https://www.credly.com/badges/9bbf76d4-c0ad-4c61-9061-481c9d6548ce/public_url
   - name: "Generative AI: Watsonx Code Assistant"
     imageUrl: "/assets/img/certs/GenAI-WatsonxCodeAssistantL2.png"
     verificationLink: https://www.credly.com/badges/8ae9a1b4-7771-49c7-bf33-4a3011956497/public_url
-  - name: "Generative AI: Watsonx Essentials"
-    imageUrl: "/assets/img/certs/GenAI-WatsonxEssentialsL1.png"
-    verificationLink: https://www.credly.com/badges/8de5632a-619d-42cf-9e76-def7a39efcaa/public_url
 
 
 
@@ -188,37 +170,6 @@ experience:
 # PROJECTS
 #############################################################################
 projects:
-- title: "Kubernetes GitOps Cluster Provisioing Automation"
-  logoUrl: "/assets/img/projects/K8sGitOpsClusterProvisioing.png"
-  technologiesUsed: |
-    <ul>
-      <li>
-        Kubernetes / OpenShift, ArgoCD, GitHub, Helm, Kustomize, Cert-Manager, HashiCorp Vault, External Secrets Operator, 
-        PostgreSQL, Apache Kafka, Stakater Reloader, Headlamp, other middleware & custom demo apps.
-      </li>
-    </ul>
-  description: |
-    <ul>
-      <li>
-        This project sets up an automated GitOps pipeline using ArgoCD to deploy and manage core infrastructure, security tools, 
-        and shared services inside a Kubernetes / OpenShift cluster. Instead of manually applying manifests, the entire cluster state is 
-        defined declaratively in a GitHub repository and synced automatically.
-      </li>
-
-      <li>
-        The pipeline combines Helm and Kustomize to keep configurations modular, DRY, and reusable across environments. 
-        The deployed stack provides baseline platform capabilities right out of the box: 
-        <strong>HashiCorp Vault and External Secrets Operator</strong> for secure credential injection, 
-        <strong>Cert-Manager</strong> for automated SSL/TLS certificates, 
-        <strong>PostgreSQL and Apache Kafka</strong> for data and messaging layers, 
-        <strong>Stakater Reloader</strong> for seamless rolling updates,
-        <strong>Headlamp</strong> as a clean UI dashboard, etc. 
-        The architecture is modularly structured, making it easy to onboard extra middleware or custom application workloads.
-      </li>
-    </ul>
-  gitRepository: "https://github.com/Microservices-Demo-Projects/gitops-platform-bootstrap"
-
-
 - title: "Serverless Expense Tracker App"
   logoUrl: "/assets/img/projects/ServerlessExpenseTrackerHLD.png"
   technologiesUsed: |

@@ -1,3 +1,6 @@
+# Use this when deploying to GitHub Pages, so that updates to details does not require angular code rebuild and deployment.
+portfolioDataSource: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/refs/heads/portfolio-data/assets/data/portfolio-data.yaml"
 
-portfolioDataSource: "/assets/data/portfolio-data.yaml"
-# portfolioDataSource: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/master/src/assets/data/portfolio-data.yaml"
+# Use for local development:
+# portfolioDataSource: "/assets/data/portfolio-data.yaml"
+

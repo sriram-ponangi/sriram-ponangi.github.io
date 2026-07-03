@@ -24,8 +24,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Updating Node.js and Angular
 
-This project should stay on an Angular-supported Node.js version. Angular only officially supports **even-numbered LTS releases** of Node (e.g. 22, 24) — odd-numbered "Current" releases (23, 25, 26...) will trigger an unsupported-version warning from the Angular CLI.
-
 Check what's currently required:
 ```shell
 ng version
@@ -140,8 +138,9 @@ ng generate service services/PortfolioData
 ## STEP-2: Deploy the angular app
 - Copy the contents of the generated `dist` directory to `docs` in the `gh-pages` branch.
 
-### OPTIONAL
-- Update the `portfolio-data.yaml` URL from the default `/assets/data/portfolio-data.yaml` to any other remote URL.
+### IMPORTANT
+- Update the `portfolio-data.yaml` URL from the default `/assets/data/portfolio-data.yaml` to any other remote URL. As of now it is set to raw github url: `https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/refs/heads/portfolio-data/assets/data/portfolio-data.yaml` 
+- For local development, you can use the default URL. Use the raw github url when deploying to github pages to avoid rebuild and redeploy on every data update.
 
 - Commit and push the code to `gh-pages` branch.
 
