@@ -135,6 +135,52 @@ ng generate service services/PortfolioData
     ng build --configuration production --base-href https://sriram-ponangi.github.io/
     ```
 
+### Using Custom Domain
+- Checkout the angualr application in the `master` branch
+- Run the following commands:
+    ```shell
+    $ npm install
+    
+    $ ng build --configuration production --base-href /
+
+    $ rm -rf docs/*
+    $ printf "%s" "sriram.ponangi.com" > docs/CNAME
+    $ cp -r dist/sriram-ponangi.github.io/browser/* docs/
+    # On MacOs
+    $ sed -i '' 's/<title>SriramPonangiGithubIo<\/title>/<title>SriramPonangi<\/title>/g' docs/index.html
+    # On Linux (or Git Bash on Windows)
+    $ sed -i 's/<title>SriramPonangiGithubIo<\/title>/<title>SriramPonangi<\/title>/g' docs/index.html
+    ```
+
+#### Other DNS Configs
+> Step 1: Add the custom domain in GitHub
+- Go to your repo sriram-ponangi/sriram-ponangi.github.io on GitHub
+- Go to Settings → Pages
+- Under "Custom domain," enter sriram.ponangi.com and save GitHub will automatically create a CNAME file in your repo's root containing that domain (if it doesn't, create one yourself with just that one line)
+
+> Step 2: Create the DNS record in Route53
+- Go to Route53 → Hosted zones → ponangi.com
+- Click Create record
+- Fill in:
+    - Record name: sriram
+    - Record type: CNAME
+    - Value: sriram-ponangi.github.io
+    - TTL: 300 (default is fine)
+- Save the record
+
+> Note: use CNAME, not an A record, since GitHub Pages user sites are served from a hostname, not a fixed IP (unlike apex domains, which need A/ALIAS records to GitHub's IPs — but since you're using a subdomain, CNAME is correct and simpler).
+
+> Step 3: Wait and verify
+- DNS propagation usually takes a few minutes to an hour, sometimes longer.
+- Once it resolves, go back to GitHub → Settings → Pages and check "Enforce HTTPS" — GitHub needs to issue a certificate for the domain first, which can take up to 24 hours, but is usually much faster
+- You can check propagation status by running dig sriram.ponangi.com in a terminal, or using a site like whatsmydns.net
+
+> A couple of things to double check
+- If using AWS make sure Route53 is actually your domain's authoritative DNS (i.e., your registrar's nameservers point to the Route53 hosted zone). If you bought the domain through Route53 directly, this is automatic.
+- If you ever want ponangi.com (the apex/root, no subdomain) to also point somewhere, that requires a different setup (A records or Route53's ALIAS feature), separate from this.
+
+
+
 ## STEP-2: Deploy the angular app
 - Copy the contents of the generated `dist` directory to `docs` in the `gh-pages` branch.
 
