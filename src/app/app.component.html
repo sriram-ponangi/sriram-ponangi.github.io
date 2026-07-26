@@ -442,11 +442,48 @@
           PROJECTS
         </a>
 
+        <ng-template #projectPaginationControls>
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <span class="small">Projects per page</span>
+              <select class="form-select form-select-sm w-auto" aria-label="Projects per page"
+                [value]="projectPageSize" (change)="changeProjectPageSize($event)">
+                @for (size of projectPageSizeOptions; track size) {
+                <option [value]="size">{{size}}</option>
+                }
+              </select>
+            </div>
+
+            <nav aria-label="Projects pagination">
+              <ul class="pagination pagination-sm mb-0">
+                <li class="page-item" [class.disabled]="currentProjectPage === 1">
+                  <button type="button" class="page-link" (click)="selectProjectPage(currentProjectPage - 1)"
+                    [disabled]="currentProjectPage === 1">Previous</button>
+                </li>
+                @for (page of projectPages; track page) {
+                <li class="page-item" [class.active]="page === currentProjectPage">
+                  <button type="button" class="page-link" (click)="selectProjectPage(page)"
+                    [attr.aria-current]="page === currentProjectPage ? 'page' : null">{{page}}</button>
+                </li>
+                }
+                <li class="page-item" [class.disabled]="currentProjectPage === totalProjectPages">
+                  <button type="button" class="page-link" (click)="selectProjectPage(currentProjectPage + 1)"
+                    [disabled]="currentProjectPage === totalProjectPages">Next</button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </ng-template>
+
+        @if (projects.length > 0) {
+        <ng-container [ngTemplateOutlet]="projectPaginationControls"></ng-container>
+        }
+
         <div class="row">
-          @for (project of data?.projects; track project?.title) {
+          @for (project of pagedProjects; track project?.title) {
           <div class="col-lg-12">
-            <div class="card mt-2">
-              <img class="card-img-top" [src]="$safeNavigationMigration(project?.logoUrl)" alt="Card cap">
+            <div class="card mt-4 border-0 shadow-sm project-card">
+              <img class="card-img-top project-image" [src]="$safeNavigationMigration(project?.logoUrl)" alt="Card cap">
               <div class="card-body">
                 <p class="card-title fw-bolder fs-5">{{project?.title}}</p>
                 <p class="fw-bold fs-6 fst-italic">Technologies Used</p>
@@ -456,6 +493,7 @@
                     <li>{{project?.technologiesUsed}}</li>
                   </ul> -->
                 </span>
+                <hr class="my-3">
                 <p class="fw-bold fs-6 fst-italic">Description</p>
                 <span class="card-text fw-light">
                   <p [innerHTML]="$safeNavigationMigration(project?.description)"></p>
@@ -477,6 +515,10 @@
           </div>
           }
         </div>
+
+        @if (projects.length > 0) {
+        <ng-container [ngTemplateOutlet]="projectPaginationControls"></ng-container>
+        }
       </div>
       <!-- SECTION-2: PROJECTS ENDS -->
     </div>
@@ -490,8 +532,3 @@
 }
 
 <router-outlet />
-
-<!-- 
-Next Features:
-- Instead of using the YAML link hardcoded to /assets/data/portfolio-data.yaml replace it with an environment variable.
--->
