@@ -255,6 +255,33 @@ projects:
     </ul>
   gitRepository: "https://github.com/sriram-ponangi/expense_tracker"
 
+- title: "AWS Lightsail Full-Stack Deployment with Route 53"
+  logoUrl: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/portfolio-data/assets/img/projects/AwsLightsailFullstackDeployment.png"
+  technologiesUsed: |
+    <ul>
+      <li>AWS Lightsail (Container Service, Managed PostgreSQL), Amazon Route 53, AWS Certificate Manager, Spring Boot 3.5 (Java 25), Angular 21 (SSR), PostgreSQL 17, Flyway, Red Hat UBI9 Container.</li>
+    </ul>
+  description: |
+    <ul>
+      <li>
+          End-to-end deployment of a containerized three-tier application onto <strong>AWS Lightsail Container Service</strong>, 
+          co-locating an <strong>Angular 21 SSR</strong> frontend and a <strong>Spring Boot 3.5</strong> REST API on a single small node, 
+          backed by a <strong>Lightsail Managed PostgreSQL 17</strong> database in private mode with VPC peering enabled. 
+          The two containers communicate over localhost since Lightsail does not provide compose-style inter-container DNS.
+      </li>
+
+      <li>
+        A custom HTTPS domain (todo-list.ponangi.com) is served via an <strong>Amazon Route 53</strong> hosted zone using an <strong>A alias record</strong> 
+        to the Lightsail service, secured by an <strong>AWS Certificate Manager</strong> certificate validated over DNS and attached to the container service.
+      </li>
+
+      <li>
+        Multi-arch container images are built with Docker Buildx (linux/amd64 required for Lightsail if your. Important especially when the machine building is using linux/arm64), 
+        pushed to the Lightsail container registry with aws lightsail push-container-image, and deployed as versioned deployments with one-click rollback.
+      </li>
+    </ul>
+  gitRepository: "https://github.com/sriram-ponangi/aws-lightsail-fullstack-deployment"
+
 - title: "Distributed Log Tracing Using Jaeger"
   logoUrl: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/portfolio-data/assets/img/projects/LogTracingProjectHLD.png"
   technologiesUsed: |
