@@ -301,29 +301,18 @@ projects:
   logoUrl: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/portfolio-data/assets/img/projects/TimeTravelAgent.png"
   technologiesUsed: |
     <ul>
-      <li>Java 25, Spring Boot 4.1, Javassist Bytecode Instrumentation, Docker/Podman, Kubernetes, REST API, ConfigMap, Maven</li>
+      <li>Java 25, Spring Boot 4.1, Javassist, Quartz, Docker, Kubernetes, Maven</li>
     </ul>
   description: |
     <ul>
       <li>
-        A lightweight Java instrumentation agent that enables applications to perceive a different system date/time without modifying the actual system clock. 
-        This is critical for testing date-dependent scenarios in <strong>managed Kubernetes / OpenShift clusters</strong> where changing the OS clock on worker nodes is not feasible due to operational constraints and shared workloads.
+        A Java agent that lets an application perceive a shifted system date without touching the OS clock — solving date-dependent tests (batch runs, subscription renewals, cert rollover) in shared environments like Kubernetes/OpenShift clusters where changing the VM / worker-node time is not viable.
       </li>
-
       <li>
-        The agent uses <strong>Javassist bytecode instrumentation</strong> to intercept standard Java date/time APIs at class-load time, applying a configurable day offset to simulate future or past dates. 
-        Intercepted APIs include <code>LocalDate.now()</code>, <code>LocalDateTime.now()</code>, <code>Instant.now()</code>, <code>new Date()</code>, and <code>Calendar.getInstance()</code>. 
-        The offset is configured via a simple text file (<code>OFFSET_DAYS</code>), making it trivial to toggle between future, past, and current date simulations without code changes.
+        Uses <strong>Javassist bytecode instrumentation</strong> at class-load time to rewrite standard Java date APIs (<code>LocalDate.now()</code>, <code>Instant.now()</code>, <code>new Date()</code>, <code>Calendar</code>). Offset is configured via a single-integer file, mounted from a Kubernetes <strong>ConfigMap</strong>. Zero application code changes.
       </li>
-
       <li>
-        The <strong>demo application</strong> is a <strong>Spring Boot REST API</strong> wrapped in a multi-stage Docker container that automatically builds both the agent and app JAR files. 
-        A <strong>GET /api/datetime/current</strong> endpoint returns the output of all intercepted date/time APIs side-by-side, showing which functions the agent successfully offset and providing alternatives for native methods that cannot be intercepted (e.g., <code>System.currentTimeMillis()</code>). 
-        Deployed to <strong>Kubernetes</strong> via simple manifests: a <strong>ConfigMap</strong> for the offset, a <strong>Deployment</strong> mounting it, and a <strong>Service</strong> for access.
-      </li>
-
-      <li>
-        <strong>Use cases</strong> include testing batch jobs at future dates, validating subscription renewals and expiry workflows, ensuring certificate rollover logic, and verifying historical data processing pipelines — all without disrupting the cluster or waiting for real time to pass.
+        Ships as a multi-stage Docker image with a Spring Boot demo exposing REST endpoints that surface intercepted APIs side-by-side and expose the two-clock mismatch behind Quartz scheduling (<code>System.currentTimeMillis()</code> stays real, since native methods can't be instrumented).
       </li>
     </ul>
   gitRepository: "https://github.com/sriram-ponangi/java-time-travel-agent"
