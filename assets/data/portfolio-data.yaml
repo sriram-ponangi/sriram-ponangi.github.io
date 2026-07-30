@@ -314,3 +314,25 @@ projects:
       </li>
     </ul>
   gitRepository: "https://github.com/sriram-ponangi/java-time-travel-agent"
+
+- title: "Hardened SFTP Server on Kubernetes / OpenShift"
+  logoUrl: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/portfolio-data/assets/img/projects/HardenedSftpK8s.png"
+  technologiesUsed: |
+    <ul>
+      <li> OpenSSH, Kubernetes (PodSecurityAdmission), OpenShift (SecurityContextConstraints), Podman / Docker</li>
+    </ul>
+  description: |
+    <ul>
+      <li>
+        A hardened, SFTP-only container on <strong>Red Hat UBI9 / OpenSSH</strong> — multi-arch (amd64 + arm64),
+        with ready-to-apply <strong>Kubernetes</strong> and <strong>OpenShift</strong> manifests. Ships two variants:
+        <strong>multi-user</strong> (chrooted per-user logins, sshd as root) and
+        <strong>single-non-root</strong> (one login, fully rootless UID 6000).
+      </li>
+      <li>
+        Both variants share the same hardening: <code>readOnlyRootFilesystem</code>, dropped capabilities,
+        <strong>SSH-key-only auth</strong>, and a paired cross-namespace <strong>NetworkPolicy</strong> on TCP/8022. Includes a small
+        load-runner demo client that uploads a random-content file every 30 seconds to prove the end-to-end flow.
+      </li>
+    </ul>
+  gitRepository: "https://github.com/sriram-ponangi/hardened-sftp-k8s"
