@@ -235,20 +235,24 @@ projects:
   logoUrl: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/portfolio-data/assets/img/projects/ServerlessExpenseTrackerHLD.png"
   technologiesUsed: |
     <ul>
-      <li>Angular, AWS Lambda (Node.js), Amazon API Gateway, Amazon Cognito, Amazon DynamoDB, Serverless Framework, GitHub Actions</li>
+      <li>Angular, AWS Lambda (Node.js), Amazon API Gateway, Amazon Cognito, Amazon DynamoDB, Terraform, S3 (remote state)</li>
     </ul>
   description: |
     <ul>
       <li>
-          A full-stack serverless application that lets users track personal expenses.
-          The frontend is an <strong>Angular</strong> single-page application (SPA) hosted on GitHub Pages or an S3 bucket.
-          The backend runs on <strong>AWS Lambda</strong> (Node.js) behind <strong>Amazon API Gateway</strong>, with authentication
-          and authorization provided by <strong>Amazon Cognito</strong>. Expense data is persisted in <strong>Amazon DynamoDB</strong>.
+        A full-stack serverless application that lets users track personal expenses.
+        The frontend is an <strong>Angular</strong> single-page application (SPA); for this project it is deployed to any one of
+        an <strong>S3 bucket</strong>, <strong>Cloudflare Pages</strong>, or <strong>GitHub Pages</strong>.
+        The backend runs on <strong>AWS Lambda</strong> (Node.js) behind <strong>Amazon API Gateway</strong>, with authentication and
+        authorization provided by <strong>Amazon Cognito</strong>. Expense data is persisted in <strong>Amazon DynamoDB</strong> with
+        provisioned throughput + application auto-scaling and point-in-time recovery.
       </li>
 
       <li>
-        <strong>CI/CD</strong> The repository uses <strong>GitHub Actions</strong> to run unit tests, linting, and automatically deploy the
-        Serverless backend (via the Serverless Framework) and the Angular frontend to GitHub Pages.
+        <strong>Infrastructure as Code:</strong> the entire AWS backend — Cognito user pool + hosted-UI, API Gateway (REST + Cognito authorizer),
+        Lambda functions and IAM roles, DynamoDB table with auto-scaling policies — is managed by <strong>Terraform</strong>. Existing console-built
+        resources were brought under management via <code>import { }</code> blocks with zero downtime. State is stored in <strong>Amazon S3</strong>
+        with native (S3-only) locking, no DynamoDB lock table required.
       </li>
     </ul>
   gitRepository: "https://github.com/sriram-ponangi/expense_tracker"
