@@ -230,7 +230,6 @@ projects:
     </ul>
   gitRepository: "https://github.com/Microservices-Demo-Projects/gitops-platform-bootstrap"
 
-
 - title: "Serverless Expense Tracker App"
   logoUrl: "https://raw.githubusercontent.com/sriram-ponangi/sriram-ponangi.github.io/portfolio-data/assets/img/projects/ServerlessExpenseTrackerHLD.png"
   technologiesUsed: |
@@ -241,8 +240,7 @@ projects:
     <ul>
       <li>
         A full-stack serverless application that lets users track personal expenses.
-        The frontend is an <strong>Angular</strong> single-page application (SPA); for this project it is deployed to
-        an <strong>S3 bucket</strong> (other alternative simple solutions tried: <strong>Cloudflare Pages</strong> & <strong>GitHub Pages</strong>).
+        The frontend is an <strong>Angular</strong> single-page application (SPA) deployed to an <strong>S3 bucket</strong> (also tried on Cloudflare Pages and GitHub Pages as alternatives).
         The backend runs on <strong>AWS Lambda</strong> (Node.js) behind <strong>Amazon API Gateway</strong>, with authentication and
         authorization provided by <strong>Amazon Cognito</strong>. Expense data is persisted in <strong>Amazon DynamoDB</strong> with
         provisioned throughput + application auto-scaling and point-in-time recovery.
@@ -250,8 +248,13 @@ projects:
 
       <li>
         <strong>Infrastructure as Code:</strong> the entire AWS backend — Cognito user pool + hosted-UI, API Gateway (REST + Cognito authorizer),
-        Lambda functions and IAM roles, DynamoDB table with auto-scaling policies — is managed by <strong>Terraform</strong>. 
+        Lambda functions and IAM roles, DynamoDB table with auto-scaling policies — is managed by <strong>Terraform</strong>.
         State is stored in <strong>Amazon S3</strong> with native (S3-only) locking.
+      </li>
+
+      <li>
+        <strong>Also, data backup &amp; restore:</strong> Bash scripts are developed and used to export the table to S3 and
+        restore it into a fresh table via DynamoDB's <strong>import-table</strong> when needed — complementing the live table's point-in-time recovery.
       </li>
     </ul>
   gitRepository: "https://github.com/sriram-ponangi/expense_tracker"
